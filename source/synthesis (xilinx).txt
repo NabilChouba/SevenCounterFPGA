@@ -1,0 +1,470 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 3.41 s | Elapsed : 0.00 / 4.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 3.43 s | Elapsed : 0.00 / 4.00 s
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s1500-4-fg456
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : top.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx92i/scount/couter.vhdl" in Library work.
+Architecture rtl of Entity counter is up to date.
+Compiling vhdl file "C:/Xilinx92i/scount/decoder7s.vhdl" in Library work.
+Architecture rtl of Entity decoder7s is up to date.
+Compiling vhdl file "C:/Xilinx92i/scount/display_UnitTen.vhdl" in Library work.
+Architecture rtl of Entity display_unitten is up to date.
+Compiling vhdl file "C:/Xilinx92i/scount/pluse.vhd" in Library work.
+Entity <upluse> compiled.
+Entity <upluse> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Xilinx92i/scount/top.vhdl" in Library work.
+Architecture rtl of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <display_UnitTen> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Upluse> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <decoder7s> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <rtl>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <display_UnitTen> in library <work> (Architecture <rtl>).
+Entity <display_UnitTen> analyzed. Unit <display_UnitTen> generated.
+
+Analyzing Entity <counter> in library <work> (Architecture <rtl>).
+Entity <counter> analyzed. Unit <counter> generated.
+
+Analyzing Entity <decoder7s> in library <work> (Architecture <rtl>).
+Entity <decoder7s> analyzed. Unit <decoder7s> generated.
+
+Analyzing Entity <Upluse> in library <work> (Architecture <rtl>).
+Entity <Upluse> analyzed. Unit <Upluse> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Upluse>.
+    Related source file is "C:/Xilinx92i/scount/pluse.vhd".
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 16-bit adder for signal <count_filter_next$addsub0000> created at line 65.
+    Found 16-bit register for signal <count_filter_reg>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Upluse> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "C:/Xilinx92i/scount/couter.vhdl".
+    Found 4-bit up counter for signal <count_reg>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <decoder7s>.
+    Related source file is "C:/Xilinx92i/scount/decoder7s.vhdl".
+    Found 16x7-bit ROM for signal <S7Display>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder7s> synthesized.
+
+
+Synthesizing Unit <display_UnitTen>.
+    Related source file is "C:/Xilinx92i/scount/display_UnitTen.vhdl".
+Unit <display_UnitTen> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Xilinx92i/scount/top.vhdl".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 1
+ 16-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <U_Upluse/state_reg> on signal <state_reg[1:3]> with gray encoding.
+---------------------------------
+ State               | Encoding
+---------------------------------
+ idle                | 000
+ wait_count          | 001
+ inc_dispaly         | 011
+ wait_released_noise | 010
+ wait_released       | 110
+---------------------------------
+Loading device for application Rf_Device from file '3s1500.nph' in environment C:\Xilinx92i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <Upluse> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 101
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 15
+#      LUT2                        : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 45
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 27
+#      FDC                         : 19
+#      FDCE                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1500fg456-4 
+
+ Number of Slices:                      37  out of  13312     0%  
+ Number of Slice Flip Flops:            27  out of  26624     0%  
+ Number of 4 input LUTs:                69  out of  26624     0%  
+ Number of IOs:                         17
+ Number of bonded IOBs:                 17  out of    333     5%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 27    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.346ns (Maximum Frequency: 157.580MHz)
+   Minimum input arrival time before clock: 3.396ns
+   Maximum output required time after clock: 9.225ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.346ns (frequency: 157.580MHz)
+  Total number of paths / destination ports: 311 / 35
+-------------------------------------------------------------------------
+Delay:               6.346ns (Levels of Logic = 17)
+  Source:            U_Upluse/count_filter_reg_1 (FF)
+  Destination:       U_Upluse/count_filter_reg_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U_Upluse/count_filter_reg_1 to U_Upluse/count_filter_reg_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  U_Upluse/count_filter_reg_1 (U_Upluse/count_filter_reg_1)
+     LUT1:I0->O            1   0.551   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<1>_rt (U_Upluse/Madd_count_filter_next_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<1> (U_Upluse/Madd_count_filter_next_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<2> (U_Upluse/Madd_count_filter_next_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<3> (U_Upluse/Madd_count_filter_next_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<4> (U_Upluse/Madd_count_filter_next_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<5> (U_Upluse/Madd_count_filter_next_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<6> (U_Upluse/Madd_count_filter_next_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<7> (U_Upluse/Madd_count_filter_next_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<8> (U_Upluse/Madd_count_filter_next_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<9> (U_Upluse/Madd_count_filter_next_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<10> (U_Upluse/Madd_count_filter_next_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<11> (U_Upluse/Madd_count_filter_next_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<12> (U_Upluse/Madd_count_filter_next_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<13> (U_Upluse/Madd_count_filter_next_addsub0000_cy<13>)
+     MUXCY:CI->O           0   0.064   0.000  U_Upluse/Madd_count_filter_next_addsub0000_cy<14> (U_Upluse/Madd_count_filter_next_addsub0000_cy<14>)
+     XORCY:CI->O           1   0.904   0.869  U_Upluse/Madd_count_filter_next_addsub0000_xor<15> (U_Upluse/count_filter_next_addsub0000<15>)
+     LUT4:I2->O            1   0.551   0.000  U_Upluse/count_filter_next<15>1 (U_Upluse/count_filter_next<15>)
+     FDC:D                     0.203          U_Upluse/count_filter_reg_15
+    ----------------------------------------
+    Total                      6.346ns (4.261ns logic, 2.085ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.396ns (Levels of Logic = 3)
+  Source:            push (PAD)
+  Destination:       U_Upluse/state_reg_FFd2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: push to U_Upluse/state_reg_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.102  push_IBUF (push_IBUF)
+     LUT4_L:I1->LO         1   0.551   0.168  U_Upluse/state_reg_FFd2-In_SW1 (N62)
+     LUT4:I2->O            1   0.551   0.000  U_Upluse/state_reg_FFd2-In (U_Upluse/state_reg_FFd2-In)
+     FDC:D                     0.203          U_Upluse/state_reg_FFd2
+    ----------------------------------------
+    Total                      3.396ns (2.126ns logic, 1.270ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 56 / 14
+-------------------------------------------------------------------------
+Offset:              9.225ns (Levels of Logic = 2)
+  Source:            display_UnitTen_R/counter_unit/count_reg_2 (FF)
+  Destination:       Unit_R<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: display_UnitTen_R/counter_unit/count_reg_2 to Unit_R<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            13   0.720   1.509  display_UnitTen_R/counter_unit/count_reg_2 (display_UnitTen_R/counter_unit/count_reg_2)
+     LUT4:I0->O            1   0.551   0.801  display_UnitTen_R/display7s_unit/Mrom_S7Display11 (display_UnitTen_R/display7s_unit/Mrom_S7Display)
+     OBUF:I->O                 5.644          Unit_R_0_OBUF (Unit_R<0>)
+    ----------------------------------------
+    Total                      9.225ns (6.915ns logic, 2.310ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+CPU : 12.54 / 16.14 s | Elapsed : 12.00 / 16.00 s
+ 
+--> 
+
+Total memory usage is 156900 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,671 @@
+
+<!@TC:1239902896>
+#Build: Synplify Pro 9.0.1, Build 024R, Nov 13 2007
+#install: C:\Program Files\Synplicity\fpga_901
+#OS:  6.0
+#Hostname: COMBOT
+
+#Implementation: rev_1
+
+#Thu Apr 16 19:28:16 2009
+
+<a name=compilerReport12>$ Start of Compile
+#Thu Apr 16 19:28:16 2009
+
+$ Running Xilinx xflow. See log file:
+@N: : <a href="C:\Program Files\Synplicity\fpga_901\examples\rev_1\pr_1\xflow_par.log:@N::@XP_MSG">xflow_par.log</a><!@TM:1239902896> | 
+#Thu Apr 16 19:28:16 2009
+
+Synplicity VHDL Compiler, version 1.0, Build 158R, built Nov 14 2007
+Copyright (C) 1994-2007, Synplicity Inc.  All Rights Reserved
+
+@N:<a href="@N:CD720:@XP_HELP">CD720</a> : <a href="C:\Program Files\Synplicity\fpga_901\lib\vhd\std.vhd:123:18:123:22:@N:CD720:@XP_MSG">std.vhd(123)</a><!@TM:1239902896> | Setting time resolution to ns
+@N: : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\top.vhdl:14:7:14:10:@N::@XP_MSG">top.vhdl(14)</a><!@TM:1239902896> | Top entity is set to top.
+VHDL syntax check successful!
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\top.vhdl:14:7:14:10:@N:CD630:@XP_MSG">top.vhdl(14)</a><!@TM:1239902898> | Synthesizing work.top.rtl 
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\pluse.vhd:25:7:25:13:@N:CD630:@XP_MSG">pluse.vhd(25)</a><!@TM:1239902898> | Synthesizing work.upluse.rtl 
+@N:<a href="@N:CD231:@XP_HELP">CD231</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\pluse.vhd:39:19:39:21:@N:CD231:@XP_MSG">pluse.vhd(39)</a><!@TM:1239902898> | Using onehot encoding for type state_type (idle="10000")
+Post processing for work.upluse.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\display_UnitTen.vhdl:14:7:14:22:@N:CD630:@XP_MSG">display_UnitTen.vhdl(14)</a><!@TM:1239902898> | Synthesizing work.display_unitten.rtl 
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\decoder7s.vhdl:5:7:5:16:@N:CD630:@XP_MSG">decoder7s.vhdl(5)</a><!@TM:1239902898> | Synthesizing work.decoder7s.rtl 
+Post processing for work.decoder7s.rtl
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\couter.vhdl:7:7:7:14:@N:CD630:@XP_MSG">couter.vhdl(7)</a><!@TM:1239902898> | Synthesizing work.counter.rtl 
+Post processing for work.counter.rtl
+Post processing for work.display_unitten.rtl
+Post processing for work.top.rtl
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="C:\Users\chouban\Desktop\scount\vhdl source code\pluse.vhd:50:4:50:6:@N:CL201:@XP_MSG">pluse.vhd(50)</a><!@TM:1239902898> | Trying to extract state machine for register state_reg
+Extracted state machine for register state_reg
+State machine has 5 reachable states with original encodings of:
+   00001
+   00010
+   00100
+   01000
+   10000
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Apr 16 19:28:18 2009
+
+###########################################################]
+<a name=mapperReport13>Synplicity Xilinx Technology Mapper, Version 9.0.0, Build 156R, Built Nov 27 2007 18:45:15
+Copyright (C) 1994-2007, Synplicity Inc.  All Rights Reserved
+Product Version Version 9.0.1
+@N:<a href="@N:MF249:@XP_HELP">MF249</a> : <!@TM:1239902903> | Running in 32-bit mode. 
+@N:<a href="@N:MF257:@XP_HELP">MF257</a> : <!@TM:1239902903> | Gated clock conversion enabled  
+Reading Xilinx I/O pad type table from file [C:\Program Files\Synplicity\fpga_901\lib\xilinx\x_io_tbl.txt] 
+Reading Xilinx Rocket I/O parameter type table from file [C:\Program Files\Synplicity\fpga_901\lib\xilinx\gttype.txt] 
+
+
+Automatic dissolve during optimization of view:work.display_UnitTen(rtl) of display7s_ten(decoder7s)
+Automatic dissolve during optimization of view:work.display_UnitTen(rtl) of display7s_unit(decoder7s)
+Automatic dissolve at startup in view:work.display_UnitTen(rtl) of counter_ten(counter)
+Automatic dissolve at startup in view:work.display_UnitTen(rtl) of counter_unit(counter)
+@N:<a href="@N:FA239:@XP_HELP">FA239</a> : <a href="c:\users\chouban\desktop\scount\vhdl source code\decoder7s.vhdl:14:4:14:8:@N:FA239:@XP_MSG">decoder7s.vhdl(14)</a><!@TM:1239902903> | Rom display7s_ten.S7Display_1[6:0] mapped in logic.
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="c:\users\chouban\desktop\scount\vhdl source code\decoder7s.vhdl:14:4:14:8:@N:MO106:@XP_MSG">decoder7s.vhdl(14)</a><!@TM:1239902903> | Found ROM, 'display7s_ten.S7Display_1[6:0]', 10 words by 7 bits 
+@N:<a href="@N:FA239:@XP_HELP">FA239</a> : <a href="c:\users\chouban\desktop\scount\vhdl source code\decoder7s.vhdl:14:4:14:8:@N:FA239:@XP_MSG">decoder7s.vhdl(14)</a><!@TM:1239902903> | Rom display7s_unit.S7Display_1[6:0] mapped in logic.
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="c:\users\chouban\desktop\scount\vhdl source code\decoder7s.vhdl:14:4:14:8:@N:MO106:@XP_MSG">decoder7s.vhdl(14)</a><!@TM:1239902903> | Found ROM, 'display7s_unit.S7Display_1[6:0]', 10 words by 7 bits 
+@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:1239902903> | Autoconstrain Mode is ON 
+RTL optimization done.
+
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 46MB)
+Encoding state machine work.Upluse(rtl)-state_reg[0:4]
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: : <a href="c:\users\chouban\desktop\scount\vhdl source code\pluse.vhd:50:4:50:6:@N::@XP_MSG">pluse.vhd(50)</a><!@TM:1239902903> | Found counter in view:work.Upluse(rtl) inst count_filter_reg[15:0]
+
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 46MB)
+
+
+######### START OF GENERATED CLOCK OPTIMIZATION REPORT #########[
+
+================================================================
+		Instance:Pin		Generated Clock Optimization Status
+================================================================
+
+
+######### END OF GENERATED CLOCK OPTIMIZATION REPORT #########]
+
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 46MB)
+
+Clock Buffers:
+  Inserting Clock buffer for port clk,	TNM=clk
+
+
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 46MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 46MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 46MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 46MB)
+
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 46MB)
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 47MB)
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -2.02ns		  60 /        29
+   2		0h:00m:00s		    -2.02ns		  60 /        29
+   3		0h:00m:00s		    -2.02ns		  60 /        29
+   4		0h:00m:00s		    -2.02ns		  60 /        29
+------------------------------------------------------------
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -1.66ns		  60 /        29
+Timing driven replication report
+No replication required.
+
+   2		0h:00m:00s		    -1.66ns		  60 /        29
+   3		0h:00m:00s		    -1.66ns		  60 /        29
+   4		0h:00m:00s		    -1.66ns		  60 /        29
+------------------------------------------------------------
+
+Timing driven replication report
+No replication required.
+
+Timing driven replication report
+No replication required.
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -1.66ns		  60 /        29
+Timing driven replication report
+No replication required.
+
+   2		0h:00m:00s		    -1.66ns		  60 /        29
+   3		0h:00m:00s		    -1.66ns		  60 /        29
+   4		0h:00m:00s		    -1.66ns		  60 /        29
+------------------------------------------------------------
+
+Net buffering Report for view:work.top(rtl):
+No nets needed buffering.
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 47MB)
+@N:<a href="@N:FX164:@XP_HELP">FX164</a> : <!@TM:1239902903> | The option to pack flops in the IOB has not been specified  
+
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 47MB)
+Writing Analyst data base C:\Program Files\Synplicity\fpga_901\examples\rev_1\pluse.srm
+@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1239902903> | Writing default property annotation file C:\Program Files\Synplicity\fpga_901\examples\rev_1\pluse.map. 
+Writing EDIF Netlist and constraint files
+Reading Xilinx net attributes from file [C:\Program Files\Synplicity\fpga_901\lib\xilinx\netattr.txt] 
+Version 9.0.1
+@N:<a href="@N:MF276:@XP_HELP">MF276</a> : <!@TM:1239902903> | Gated clock conversion enabled, but no gated clocks found in design  
+Found clock top|clk with period 4.68ns 
+
+
+<a name=timingReport14>##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Apr 16 19:28:23 2009
+#
+
+
+Top view:               top
+Requested Frequency:    213.8 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1239902903> | This timing report estimates place and route data. Please look at the place and route timing report for final timing.. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1239902903> | Clock constraints cover only FF-to-FF paths associated with the clock.. 
+
+
+
+<a name=performanceSummary15>Performance Summary 
+*******************
+
+
+Worst slack in design: -0.825
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+top|clk            213.8 MHz     181.7 MHz     4.677         5.503         -0.825     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+
+
+<a name=clockRelationships16>Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+top|clk   top|clk  |  4.677       -0.825  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo17>Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+<a name=clockReport18>Detailed Report for Clock: top|clk
+====================================
+
+
+
+<a name=startingSlack19>Starting Points with Worst Slack
+********************************
+
+                                                Starting                                               Arrival           
+Instance                                        Reference     Type     Pin     Net                     Time        Slack 
+                                                Clock                                                                    
+-------------------------------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[0]                           top|clk       FDC      Q       state_reg[0]            0.720       -0.825
+U_Upluse.state_reg[3]                           top|clk       FDC      Q       state_reg[3]            0.720       -0.825
+display_UnitTen_R.counter_unit.count_reg[0]     top|clk       FDC      Q       count_unit[0]           0.720       0.148 
+display_UnitTen_R.counter_unit.count_reg[1]     top|clk       FDC      Q       count_unit[1]           0.720       0.149 
+display_UnitTen_R.counter_unit.count_reg[2]     top|clk       FDC      Q       count_unit[2]           0.720       0.151 
+display_UnitTen_R.counter_unit.count_reg[3]     top|clk       FDC      Q       count_unit[3]           0.720       0.154 
+U_Upluse.count_filter_reg[0]                    top|clk       FDC      Q       count_filter_reg[0]     0.720       0.204 
+U_Upluse.count_filter_reg[1]                    top|clk       FDC      Q       count_filter_reg[1]     0.720       0.204 
+U_Upluse.count_filter_reg[2]                    top|clk       FDC      Q       count_filter_reg[2]     0.720       0.204 
+U_Upluse.count_filter_reg[3]                    top|clk       FDC      Q       count_filter_reg[3]     0.720       0.204 
+=========================================================================================================================
+
+
+<a name=endingSlack20>Ending Points with Worst Slack
+******************************
+
+                                  Starting                                                  Required           
+Instance                          Reference     Type     Pin     Net                        Time         Slack 
+                                  Clock                                                                        
+---------------------------------------------------------------------------------------------------------------
+U_Upluse.count_filter_reg[15]     top|clk       FDC      D       count_filter_reg_s[15]     4.596        -0.825
+U_Upluse.count_filter_reg[14]     top|clk       FDC      D       count_filter_reg_s[14]     4.596        -0.765
+U_Upluse.count_filter_reg[13]     top|clk       FDC      D       count_filter_reg_s[13]     4.596        -0.705
+U_Upluse.count_filter_reg[12]     top|clk       FDC      D       count_filter_reg_s[12]     4.596        -0.645
+U_Upluse.count_filter_reg[11]     top|clk       FDC      D       count_filter_reg_s[11]     4.596        -0.585
+U_Upluse.count_filter_reg[10]     top|clk       FDC      D       count_filter_reg_s[10]     4.596        -0.525
+U_Upluse.count_filter_reg[9]      top|clk       FDC      D       count_filter_reg_s[9]      4.596        -0.465
+U_Upluse.count_filter_reg[8]      top|clk       FDC      D       count_filter_reg_s[8]      4.596        -0.405
+U_Upluse.count_filter_reg[7]      top|clk       FDC      D       count_filter_reg_s[7]      4.596        -0.345
+U_Upluse.count_filter_reg[6]      top|clk       FDC      D       count_filter_reg_s[6]      4.596        -0.285
+===============================================================================================================
+
+
+
+<a name=worstPaths21>Worst Path Information
+<a href="C:\Program Files\Synplicity\fpga_901\examples\rev_1\pluse.srr:fp:14928:20382:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        4.677
+    - Setup time:                            0.081
+    = Required time:                         4.596
+
+    - Propagation time:                      5.422
+    = Slack (critical) :                     -0.825
+
+    Number of logic level(s):                17
+    Starting point:                          U_Upluse.state_reg[0] / Q
+    Ending point:                            U_Upluse.count_filter_reg[15] / D
+    The start point is clocked by            top|clk [rising] on pin C
+    The end   point is clocked by            top|clk [rising] on pin C
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                  Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[0]                 FDC         Q        Out     0.720     0.720       -         
+state_reg[0]                          Net         -        -       0.804     -           8         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        I0       In      -         1.524       -         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        O        Out     0.579     2.103       -         
+N_100_i                               Net         -        -       0.810     -           13        
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     CI       In      -         2.913       -         
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     LO       Out     0.785     3.698       -         
+count_filter_reg_cry[0]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     CI       In      -         3.698       -         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     LO       Out     0.060     3.758       -         
+count_filter_reg_cry[1]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     CI       In      -         3.758       -         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     LO       Out     0.060     3.818       -         
+count_filter_reg_cry[2]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     CI       In      -         3.818       -         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     LO       Out     0.060     3.878       -         
+count_filter_reg_cry[3]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     CI       In      -         3.878       -         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     LO       Out     0.060     3.938       -         
+count_filter_reg_cry[4]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     CI       In      -         3.938       -         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     LO       Out     0.060     3.998       -         
+count_filter_reg_cry[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     CI       In      -         3.998       -         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     LO       Out     0.060     4.058       -         
+count_filter_reg_cry[6]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     CI       In      -         4.058       -         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     LO       Out     0.060     4.118       -         
+count_filter_reg_cry[7]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     CI       In      -         4.118       -         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     LO       Out     0.060     4.178       -         
+count_filter_reg_cry[8]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     CI       In      -         4.178       -         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     LO       Out     0.060     4.238       -         
+count_filter_reg_cry[9]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     CI       In      -         4.238       -         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     LO       Out     0.060     4.298       -         
+count_filter_reg_cry[10]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     CI       In      -         4.298       -         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     LO       Out     0.060     4.358       -         
+count_filter_reg_cry[11]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     CI       In      -         4.358       -         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     LO       Out     0.060     4.418       -         
+count_filter_reg_cry[12]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     CI       In      -         4.418       -         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     LO       Out     0.060     4.478       -         
+count_filter_reg_cry[13]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     CI       In      -         4.478       -         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     LO       Out     0.060     4.538       -         
+count_filter_reg_cry[14]              Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg_s[15]       XORCY       CI       In      -         4.538       -         
+U_Upluse.count_filter_reg_s[15]       XORCY       O        Out     0.883     5.422       -         
+count_filter_reg_s[15]                Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg[15]         FDC         D        In      -         5.422       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 5.503 is 3.889(70.7%) logic and 1.614(29.3%) route.
+
+
+Path information for path number 2: 
+    Requested Period:                        4.677
+    - Setup time:                            0.081
+    = Required time:                         4.596
+
+    - Propagation time:                      5.422
+    = Slack (critical) :                     -0.825
+
+    Number of logic level(s):                17
+    Starting point:                          U_Upluse.state_reg[3] / Q
+    Ending point:                            U_Upluse.count_filter_reg[15] / D
+    The start point is clocked by            top|clk [rising] on pin C
+    The end   point is clocked by            top|clk [rising] on pin C
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                  Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[3]                 FDC         Q        Out     0.720     0.720       -         
+state_reg[3]                          Net         -        -       0.804     -           8         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        I1       In      -         1.524       -         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        O        Out     0.579     2.103       -         
+N_100_i                               Net         -        -       0.810     -           13        
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     CI       In      -         2.913       -         
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     LO       Out     0.785     3.698       -         
+count_filter_reg_cry[0]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     CI       In      -         3.698       -         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     LO       Out     0.060     3.758       -         
+count_filter_reg_cry[1]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     CI       In      -         3.758       -         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     LO       Out     0.060     3.818       -         
+count_filter_reg_cry[2]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     CI       In      -         3.818       -         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     LO       Out     0.060     3.878       -         
+count_filter_reg_cry[3]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     CI       In      -         3.878       -         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     LO       Out     0.060     3.938       -         
+count_filter_reg_cry[4]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     CI       In      -         3.938       -         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     LO       Out     0.060     3.998       -         
+count_filter_reg_cry[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     CI       In      -         3.998       -         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     LO       Out     0.060     4.058       -         
+count_filter_reg_cry[6]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     CI       In      -         4.058       -         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     LO       Out     0.060     4.118       -         
+count_filter_reg_cry[7]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     CI       In      -         4.118       -         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     LO       Out     0.060     4.178       -         
+count_filter_reg_cry[8]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     CI       In      -         4.178       -         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     LO       Out     0.060     4.238       -         
+count_filter_reg_cry[9]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     CI       In      -         4.238       -         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     LO       Out     0.060     4.298       -         
+count_filter_reg_cry[10]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     CI       In      -         4.298       -         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     LO       Out     0.060     4.358       -         
+count_filter_reg_cry[11]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     CI       In      -         4.358       -         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     LO       Out     0.060     4.418       -         
+count_filter_reg_cry[12]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     CI       In      -         4.418       -         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     LO       Out     0.060     4.478       -         
+count_filter_reg_cry[13]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     CI       In      -         4.478       -         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     LO       Out     0.060     4.538       -         
+count_filter_reg_cry[14]              Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg_s[15]       XORCY       CI       In      -         4.538       -         
+U_Upluse.count_filter_reg_s[15]       XORCY       O        Out     0.883     5.422       -         
+count_filter_reg_s[15]                Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg[15]         FDC         D        In      -         5.422       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 5.503 is 3.889(70.7%) logic and 1.614(29.3%) route.
+
+
+Path information for path number 3: 
+    Requested Period:                        4.677
+    - Setup time:                            0.081
+    = Required time:                         4.596
+
+    - Propagation time:                      5.396
+    = Slack (non-critical) :                 -0.800
+
+    Number of logic level(s):                13
+    Starting point:                          U_Upluse.state_reg[0] / Q
+    Ending point:                            U_Upluse.count_filter_reg[15] / D
+    The start point is clocked by            top|clk [rising] on pin C
+    The end   point is clocked by            top|clk [rising] on pin C
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                  Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[0]                 FDC         Q        Out     0.720     0.720       -         
+state_reg[0]                          Net         -        -       0.804     -           8         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        I0       In      -         1.524       -         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        O        Out     0.579     2.103       -         
+N_100_i                               Net         -        -       0.810     -           13        
+U_Upluse.count_filter_reg_qxu[5]      LUT2_L      I0       In      -         2.913       -         
+U_Upluse.count_filter_reg_qxu[5]      LUT2_L      LO       Out     0.579     3.492       -         
+count_filter_reg_qxu[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     S        In      -         3.492       -         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     LO       Out     0.480     3.973       -         
+count_filter_reg_cry[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     CI       In      -         3.973       -         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     LO       Out     0.060     4.033       -         
+count_filter_reg_cry[6]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     CI       In      -         4.033       -         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     LO       Out     0.060     4.093       -         
+count_filter_reg_cry[7]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     CI       In      -         4.093       -         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     LO       Out     0.060     4.153       -         
+count_filter_reg_cry[8]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     CI       In      -         4.153       -         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     LO       Out     0.060     4.213       -         
+count_filter_reg_cry[9]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     CI       In      -         4.213       -         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     LO       Out     0.060     4.273       -         
+count_filter_reg_cry[10]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     CI       In      -         4.273       -         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     LO       Out     0.060     4.333       -         
+count_filter_reg_cry[11]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     CI       In      -         4.333       -         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     LO       Out     0.060     4.393       -         
+count_filter_reg_cry[12]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     CI       In      -         4.393       -         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     LO       Out     0.060     4.453       -         
+count_filter_reg_cry[13]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     CI       In      -         4.453       -         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     LO       Out     0.060     4.513       -         
+count_filter_reg_cry[14]              Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg_s[15]       XORCY       CI       In      -         4.513       -         
+U_Upluse.count_filter_reg_s[15]       XORCY       O        Out     0.883     5.396       -         
+count_filter_reg_s[15]                Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg[15]         FDC         D        In      -         5.396       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 5.477 is 3.863(70.5%) logic and 1.614(29.5%) route.
+
+
+Path information for path number 4: 
+    Requested Period:                        4.677
+    - Setup time:                            0.081
+    = Required time:                         4.596
+
+    - Propagation time:                      5.396
+    = Slack (non-critical) :                 -0.800
+
+    Number of logic level(s):                13
+    Starting point:                          U_Upluse.state_reg[3] / Q
+    Ending point:                            U_Upluse.count_filter_reg[15] / D
+    The start point is clocked by            top|clk [rising] on pin C
+    The end   point is clocked by            top|clk [rising] on pin C
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                  Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[3]                 FDC         Q        Out     0.720     0.720       -         
+state_reg[3]                          Net         -        -       0.804     -           8         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        I1       In      -         1.524       -         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        O        Out     0.579     2.103       -         
+N_100_i                               Net         -        -       0.810     -           13        
+U_Upluse.count_filter_reg_qxu[5]      LUT2_L      I0       In      -         2.913       -         
+U_Upluse.count_filter_reg_qxu[5]      LUT2_L      LO       Out     0.579     3.492       -         
+count_filter_reg_qxu[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     S        In      -         3.492       -         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     LO       Out     0.480     3.973       -         
+count_filter_reg_cry[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     CI       In      -         3.973       -         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     LO       Out     0.060     4.033       -         
+count_filter_reg_cry[6]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     CI       In      -         4.033       -         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     LO       Out     0.060     4.093       -         
+count_filter_reg_cry[7]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     CI       In      -         4.093       -         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     LO       Out     0.060     4.153       -         
+count_filter_reg_cry[8]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     CI       In      -         4.153       -         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     LO       Out     0.060     4.213       -         
+count_filter_reg_cry[9]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     CI       In      -         4.213       -         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     LO       Out     0.060     4.273       -         
+count_filter_reg_cry[10]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     CI       In      -         4.273       -         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     LO       Out     0.060     4.333       -         
+count_filter_reg_cry[11]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     CI       In      -         4.333       -         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     LO       Out     0.060     4.393       -         
+count_filter_reg_cry[12]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     CI       In      -         4.393       -         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     LO       Out     0.060     4.453       -         
+count_filter_reg_cry[13]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     CI       In      -         4.453       -         
+U_Upluse.count_filter_reg_cry[14]     MUXCY_L     LO       Out     0.060     4.513       -         
+count_filter_reg_cry[14]              Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg_s[15]       XORCY       CI       In      -         4.513       -         
+U_Upluse.count_filter_reg_s[15]       XORCY       O        Out     0.883     5.396       -         
+count_filter_reg_s[15]                Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg[15]         FDC         D        In      -         5.396       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 5.477 is 3.863(70.5%) logic and 1.614(29.5%) route.
+
+
+Path information for path number 5: 
+    Requested Period:                        4.677
+    - Setup time:                            0.081
+    = Required time:                         4.596
+
+    - Propagation time:                      5.362
+    = Slack (non-critical) :                 -0.765
+
+    Number of logic level(s):                16
+    Starting point:                          U_Upluse.state_reg[0] / Q
+    Ending point:                            U_Upluse.count_filter_reg[14] / D
+    The start point is clocked by            top|clk [rising] on pin C
+    The end   point is clocked by            top|clk [rising] on pin C
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                  Type        Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+U_Upluse.state_reg[0]                 FDC         Q        Out     0.720     0.720       -         
+state_reg[0]                          Net         -        -       0.804     -           8         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        I0       In      -         1.524       -         
+U_Upluse.COUNTER_GEN.N_100_i          LUT2        O        Out     0.579     2.103       -         
+N_100_i                               Net         -        -       0.810     -           13        
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     CI       In      -         2.913       -         
+U_Upluse.count_filter_reg_cry[0]      MUXCY_L     LO       Out     0.785     3.698       -         
+count_filter_reg_cry[0]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     CI       In      -         3.698       -         
+U_Upluse.count_filter_reg_cry[1]      MUXCY_L     LO       Out     0.060     3.758       -         
+count_filter_reg_cry[1]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     CI       In      -         3.758       -         
+U_Upluse.count_filter_reg_cry[2]      MUXCY_L     LO       Out     0.060     3.818       -         
+count_filter_reg_cry[2]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     CI       In      -         3.818       -         
+U_Upluse.count_filter_reg_cry[3]      MUXCY_L     LO       Out     0.060     3.878       -         
+count_filter_reg_cry[3]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     CI       In      -         3.878       -         
+U_Upluse.count_filter_reg_cry[4]      MUXCY_L     LO       Out     0.060     3.938       -         
+count_filter_reg_cry[4]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     CI       In      -         3.938       -         
+U_Upluse.count_filter_reg_cry[5]      MUXCY_L     LO       Out     0.060     3.998       -         
+count_filter_reg_cry[5]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     CI       In      -         3.998       -         
+U_Upluse.count_filter_reg_cry[6]      MUXCY_L     LO       Out     0.060     4.058       -         
+count_filter_reg_cry[6]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     CI       In      -         4.058       -         
+U_Upluse.count_filter_reg_cry[7]      MUXCY_L     LO       Out     0.060     4.118       -         
+count_filter_reg_cry[7]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     CI       In      -         4.118       -         
+U_Upluse.count_filter_reg_cry[8]      MUXCY_L     LO       Out     0.060     4.178       -         
+count_filter_reg_cry[8]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     CI       In      -         4.178       -         
+U_Upluse.count_filter_reg_cry[9]      MUXCY_L     LO       Out     0.060     4.238       -         
+count_filter_reg_cry[9]               Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     CI       In      -         4.238       -         
+U_Upluse.count_filter_reg_cry[10]     MUXCY_L     LO       Out     0.060     4.298       -         
+count_filter_reg_cry[10]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     CI       In      -         4.298       -         
+U_Upluse.count_filter_reg_cry[11]     MUXCY_L     LO       Out     0.060     4.358       -         
+count_filter_reg_cry[11]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     CI       In      -         4.358       -         
+U_Upluse.count_filter_reg_cry[12]     MUXCY_L     LO       Out     0.060     4.418       -         
+count_filter_reg_cry[12]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     CI       In      -         4.418       -         
+U_Upluse.count_filter_reg_cry[13]     MUXCY_L     LO       Out     0.060     4.478       -         
+count_filter_reg_cry[13]              Net         -        -       0.000     -           2         
+U_Upluse.count_filter_reg_s[14]       XORCY       CI       In      -         4.478       -         
+U_Upluse.count_filter_reg_s[14]       XORCY       O        Out     0.883     5.362       -         
+count_filter_reg_s[14]                Net         -        -       0.000     -           1         
+U_Upluse.count_filter_reg[14]         FDC         D        In      -         5.362       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 5.443 is 3.829(70.3%) logic and 1.614(29.7%) route.
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+<a name=resourceUsage22>Resource Usage Report for top 
+
+Mapping to part: xc3s50tq144-4
+Cell usage:
+FDC             28 uses
+FDP             1 use
+GND             2 uses
+MUXCY_L         15 uses
+XORCY           16 uses
+LUT2            18 uses
+LUT3            12 uses
+LUT4            30 uses
+
+I/O ports: 17
+I/O primitives: 16
+IBUF           2 uses
+OBUF           14 uses
+
+BUFGP          1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   29 (1%)
+
+Global Clock Buffers: 1 of 8 (12%)
+
+Total load per clock:
+   top|clk: 29
+
+Mapping Summary:
+Total  LUTs: 60 (3%)
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Apr 16 19:28:23 2009
+
+###########################################################]

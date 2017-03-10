@@ -1,0 +1,21 @@
+
+
+NET clk LOC = A11  ;    
+NET rst LOC = Y1   ;  
+NET push LOC = W2;
+
+NET Ten_R<0> LOC = AA18;
+NET Ten_R<1> LOC = Y18;
+NET Ten_R<2> LOC = AA15;
+NET Ten_R<3> LOC = V14;
+NET Ten_R<4> LOC = U14;
+NET Ten_R<5> LOC = V17;
+NET Ten_R<6> LOC = AB18;
+
+NET Unit_R<0> LOC = AB20;
+NET Unit_R<1> LOC = AA20;
+NET Unit_R<2> LOC = AA17;
+NET Unit_R<3> LOC = W16;
+NET Unit_R<4> LOC = V16;
+NET Unit_R<5> LOC = W18;
+NET Unit_R<6> LOC = Y17;
